@@ -128,7 +128,7 @@ public boolean login(String Role, String Password) {
             Class.forName(DRIVER);
             connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
             statement = connection.createStatement();
-            String query = "INSERT INTO items (Item_id, item, Location, Date, Color, Type, Additional_info) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            String query = "INSERT INTO items (Item_id, Item, Location, Date, Color, Type, Additional_info) VALUES (?, ?, ?, ?, ?, ?, ?)";
             
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, Item_id);
@@ -151,7 +151,7 @@ public boolean login(String Role, String Password) {
             e.printStackTrace();
         }
         
-        return true;
+        return success;
     }
 
     // delete function to the lost and found table using the id
@@ -161,7 +161,7 @@ public boolean login(String Role, String Password) {
             Class.forName(DRIVER);
             connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
             statement = connection.createStatement();
-            String query = "DELETE FROM lost_and_found WHERE Item_id = ?";
+            String query = "DELETE FROM items WHERE Item_ID = ?";
             
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, Item_id);
@@ -220,7 +220,7 @@ public boolean login(String Role, String Password) {
             Class.forName(DRIVER);
             connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
             statement = connection.createStatement();
-            String query = "UPDATE lost_and_found SET item = ?, Location = ?, Date = ?, Color = ?, Type = ?, Additional_info = ? WHERE Item_id = ?";
+            String query = "UPDATE items SET item = ?, Location = ?, Date = ?, Color = ?, Type = ?, Additional_info = ? WHERE Item_ID = ?";
             
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, item);

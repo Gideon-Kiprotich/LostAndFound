@@ -53,7 +53,7 @@ public class LostAndFound extends JFrame implements ActionListener {
     private JLabel lblStudType;
     private JLabel lblStudInfo;
     private JButton btnRegLogin;
-    private JTable table1;
+    private JTable tblAdminView;
     private JPanel user;
     private String role;
 
@@ -174,8 +174,7 @@ public class LostAndFound extends JFrame implements ActionListener {
 
                 if(db.add(item_id, item, location, date, color, type, info)){
                     JOptionPane.showMessageDialog(null,"You have added an item successfully.\n Welcome");
-                    admin.setVisible(false);
-                    student.setVisible(true);
+
                 } else{
                     JOptionPane.showMessageDialog(null,"Not able to add, check for errors");
                 }
@@ -190,8 +189,7 @@ public class LostAndFound extends JFrame implements ActionListener {
 
                 if(db.delete(item_id)){
                     JOptionPane.showMessageDialog(null,"You have deleted an item successfully.\n Welcome");
-                    admin.setVisible(false);
-                    student.setVisible(true);
+
                 } else{
                     JOptionPane.showMessageDialog(null,"You have not entered all the fields or Wrong credentials");
                 }
@@ -212,8 +210,7 @@ public class LostAndFound extends JFrame implements ActionListener {
 
                 if(db.update(item_id, item, location, date, color, type, info)){
                     JOptionPane.showMessageDialog(null,"You have updated an item successfully.\n Welcome");
-                    admin.setVisible(false);
-                    student.setVisible(true);
+
                 } else{
                     JOptionPane.showMessageDialog(null,"You have not entered all the fields or Wrong credentials");
                 }
