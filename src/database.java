@@ -120,17 +120,17 @@ public boolean login(String Role, String Password) {
     }
 
     // The add function to the lost and found table
-    public boolean add(int Item_id, String item, String Location, String Date, String Color, String Type, String Additional_info){
+    public boolean add(int Item_id, String Item, String Location, String Date, String Color, String Type, String Additional_info){
         boolean success = false;
         try {
             Class.forName(DRIVER);
             connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
             statement = connection.createStatement();
-            String query = "INSERT INTO items (Item_id, item, Location, Date, Color, Type, Additional_info) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            String query = "INSERT INTO items (Item_id, Item, Location, Date, Color, Type, Additional_info) VALUES (?, ?, ?, ?, ?, ?, ?)";
             
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, Item_id);
-            preparedStatement.setString(2, item);
+            preparedStatement.setString(2, Item);
             preparedStatement.setString(3, Location);
             preparedStatement.setString(4, Date);
             preparedStatement.setString(5, Color);
@@ -149,7 +149,7 @@ public boolean login(String Role, String Password) {
             e.printStackTrace();
         }
         
-        return success;
+        return true;
     }
 
     // delete function to the lost and found table using the id

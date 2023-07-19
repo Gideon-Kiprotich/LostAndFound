@@ -175,7 +175,7 @@ public class LostAndFound extends JFrame implements ActionListener {
                     admin.setVisible(false);
                     student.setVisible(true);
                 } else{
-                    JOptionPane.showMessageDialog(null,"You have not entered all the fields or Wrong credentials");
+                    JOptionPane.showMessageDialog(null,"Not able to add, check for errors");
                 }
             } catch (Exception ex){
                 System.out.println(ex.getMessage());
