@@ -24,7 +24,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="4115f" class="javax.swing.JTextField" binding="txtLoginPassword">
@@ -34,7 +34,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="a9f7f" class="javax.swing.JLabel" binding="username">
@@ -42,6 +42,7 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Username"/>
             </properties>
           </component>
@@ -50,6 +51,7 @@
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Password"/>
             </properties>
           </component>
@@ -58,7 +60,8 @@
               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
+              <font name="Segoe Print"/>
               <text value="Login as Admin"/>
             </properties>
           </component>
@@ -67,7 +70,8 @@
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
+              <font name="Segoe Print"/>
               <text value="Login as Student"/>
             </properties>
           </component>
@@ -76,7 +80,8 @@
               <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
+              <font name="Segoe Print"/>
               <text value="Register"/>
             </properties>
           </component>
@@ -99,7 +104,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="bb691" class="javax.swing.JTextField" binding="txtRegistrationSchoolID">
@@ -109,7 +114,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="1313" class="javax.swing.JTextField" binding="txtRegistrationEmail">
@@ -119,7 +124,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="ecc34" class="javax.swing.JTextField" binding="txtRegistrationPassword">
@@ -129,7 +134,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="b0f8f" class="javax.swing.JTextField" binding="txtRegistrationFaculty">
@@ -139,7 +144,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="29dd8" class="javax.swing.JTextField" binding="txtRegistrationNationalID">
@@ -149,7 +154,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="82009" class="javax.swing.JLabel" binding="lblRegName">
@@ -157,6 +162,7 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Name"/>
             </properties>
           </component>
@@ -165,6 +171,7 @@
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="School ID"/>
             </properties>
           </component>
@@ -173,6 +180,7 @@
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Email"/>
             </properties>
           </component>
@@ -181,6 +189,7 @@
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Password"/>
             </properties>
           </component>
@@ -189,6 +198,7 @@
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Faculty"/>
             </properties>
           </component>
@@ -197,6 +207,7 @@
               <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="National ID"/>
             </properties>
           </component>
@@ -207,7 +218,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="3d423" class="javax.swing.JTextField" binding="txtRegistrationGender">
@@ -217,7 +228,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="62bec" class="javax.swing.JTextField" binding="txtRegistrationPhone">
@@ -227,7 +238,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="bc2b5" class="javax.swing.JTextField" binding="txtRegistrationRole">
@@ -237,7 +248,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="e78eb" class="javax.swing.JLabel" binding="lblRegAddress">
@@ -245,6 +256,7 @@
               <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Address"/>
             </properties>
           </component>
@@ -253,6 +265,7 @@
               <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Gender"/>
             </properties>
           </component>
@@ -261,6 +274,7 @@
               <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Phone"/>
             </properties>
           </component>
@@ -269,6 +283,7 @@
               <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Role"/>
             </properties>
           </component>
@@ -277,7 +292,8 @@
               <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
+              <font name="Segoe Print"/>
               <text value="Submit"/>
             </properties>
           </component>
@@ -286,7 +302,8 @@
               <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
+              <font name="Segoe Print"/>
               <text value="Go to Login"/>
             </properties>
           </component>
@@ -307,7 +324,8 @@
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
+              <font name="Segoe Print"/>
               <text value="Update"/>
             </properties>
           </component>
@@ -316,7 +334,8 @@
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
+              <font name="Segoe Print"/>
               <text value="Delete"/>
             </properties>
           </component>
@@ -325,7 +344,8 @@
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
+              <font name="Segoe Print"/>
               <text value="Add"/>
             </properties>
           </component>
@@ -336,7 +356,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="7a81c" class="javax.swing.JTextField" binding="txtAminLocation">
@@ -346,7 +366,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="57fb5" class="javax.swing.JTextField" binding="txtAdminDate">
@@ -356,7 +376,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="f6047" class="javax.swing.JTextField" binding="txtAdminColor">
@@ -366,7 +386,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="e8a6f" class="javax.swing.JLabel" binding="lblStudItem">
@@ -374,6 +394,7 @@
               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Item"/>
             </properties>
           </component>
@@ -382,6 +403,7 @@
               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Location"/>
             </properties>
           </component>
@@ -390,6 +412,7 @@
               <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Date"/>
             </properties>
           </component>
@@ -398,6 +421,7 @@
               <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Color"/>
             </properties>
           </component>
@@ -408,7 +432,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="25e12" class="javax.swing.JLabel" binding="lblStudType">
@@ -416,6 +440,7 @@
               <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Type"/>
             </properties>
           </component>
@@ -424,6 +449,7 @@
               <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Info"/>
             </properties>
           </component>
@@ -434,7 +460,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="d10b" class="javax.swing.JLabel" binding="lblStudItemID">
@@ -442,6 +468,7 @@
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Item ID"/>
             </properties>
           </component>
@@ -452,7 +479,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="e1dbd" class="javax.swing.JButton" binding="btnAdminGoBack">
@@ -460,7 +487,8 @@
               <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
+              <font name="Segoe Print"/>
               <text value="Go back"/>
             </properties>
           </component>
@@ -483,7 +511,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="7506e" class="javax.swing.JLabel">
@@ -491,6 +519,7 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Item"/>
             </properties>
           </component>
@@ -499,6 +528,7 @@
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Location"/>
             </properties>
           </component>
@@ -509,7 +539,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="d7a70" class="javax.swing.JLabel">
@@ -517,6 +547,7 @@
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Date"/>
             </properties>
           </component>
@@ -527,7 +558,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="a0380" class="javax.swing.JLabel">
@@ -535,6 +566,7 @@
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Color"/>
             </properties>
           </component>
@@ -545,7 +577,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="a9cda" class="javax.swing.JTable" binding="table1" default-binding="true">
@@ -555,7 +587,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
           <component id="54bd8" class="javax.swing.JLabel">
@@ -563,6 +595,7 @@
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Segoe Print"/>
               <text value="Type"/>
             </properties>
           </component>
@@ -571,7 +604,8 @@
               <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
+              <font name="Segoe Print"/>
               <text value="Search"/>
             </properties>
           </component>
@@ -580,7 +614,8 @@
               <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
+              <font name="Segoe Print"/>
               <text value="Go Back"/>
             </properties>
           </component>
@@ -591,7 +626,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-11919555"/>
+              <background color="-4940128"/>
             </properties>
           </component>
         </children>
