@@ -110,8 +110,6 @@ public class LostAndFound extends JFrame implements ActionListener {
         this.setSize(600,600);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.add(cmbStud);
-        this.add(cmbAdmin);
 
         // Add the panel to the frame
         this.add(panel1);
@@ -129,13 +127,13 @@ public class LostAndFound extends JFrame implements ActionListener {
         btnAdminGoBack.addActionListener(this);
         btnStudGoBack.addActionListener(this);
 
-        cmbAdmin.addItem("Stationary");
-        cmbAdmin.addItem("Electronic Devices");
-        cmbAdmin.addItem("Personal Items");
+        // cmbAdmin.addItem("Stationary");
+        // cmbAdmin.addItem("Electronic Devices");
+        // cmbAdmin.addItem("Personal Items");
 
-        cmbStud.addItem("Stationary");
-        cmbStud.addItem("Electronic Devices");
-        cmbStud.addItem("Personal Items");
+        // cmbStud.addItem("Stationary");
+        // cmbStud.addItem("Electronic Devices");
+        // cmbStud.addItem("Personal Items");
     }
 
     @Override
