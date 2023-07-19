@@ -127,7 +127,6 @@ public boolean login(String Role, String Password) {
             connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
             statement = connection.createStatement();
             String query = "INSERT INTO items (Item_id, Item, Location, Date, Color, Type, Additional_info) VALUES (?, ?, ?, ?, ?, ?, ?)";
-
             
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, Item_id);
