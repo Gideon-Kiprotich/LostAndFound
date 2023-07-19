@@ -186,13 +186,12 @@ public boolean login(String Role, String Password) {
 
     }
 
-    // Search items that are like the input: item, location, date, color, type then display them in the table
     public void search(JTable table1, String item, String location, String date, String color, String type) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
-
-            PreparedStatement insert = connection.prepareStatement("SELECT * FROM items WHERE Item LIKE ? OR Location LIKE ? OR Date LIKE ? OR Color LIKE ? OR Type LIKE ?");
+    
+            PreparedStatement insert = connection.prepareStatement("SELECT * FROM items WHERE Item LIKE ? OR Location = ? OR Date LIKE ? OR Color LIKE ? OR Type = ?");
             insert.setString(1, "%" + item + "%");
             insert.setString(2, "%" + location + "%");
             insert.setString(3, "%" + date + "%");
@@ -201,15 +200,17 @@ public boolean login(String Role, String Password) {
             ResultSet resultSet = insert.executeQuery();
             ResultSetMetaData rsmd = resultSet.getMetaData();
             DefaultTableModel model = (DefaultTableModel) table1.getModel();
-
+    
+            // Clear existing rows from the table
             model.setRowCount(0);
-            
+    
             int col = rsmd.getColumnCount();
             String[] colName = new String[col];
             for (int i = 0; i < col; i++) {
                 colName[i] = rsmd.getColumnName(i + 1);
                 model.setColumnIdentifiers(colName);
             }
+    
             String a, b, c, d, e, f, g;
             while (resultSet.next()) {
                 a = resultSet.getString(1);
@@ -222,12 +223,21 @@ public boolean login(String Role, String Password) {
                 String[] row = {a, b, c, d, e, f, g};
                 model.addRow(row);
             }
+    
+            // Close the ResultSet and PreparedStatement
+            resultSet.close();
+            insert.close();
+    
+            // Close the database connection
+            connection.close();
+    
         } catch (ClassNotFoundException ex) {
             throw new RuntimeException(ex);
         } catch (SQLException ex) {
             throw new RuntimeException(ex);
         }
     }
+    
     
 
 
