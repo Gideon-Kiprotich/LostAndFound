@@ -191,7 +191,8 @@ public boolean login(String Role, String Password) {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
     
-            PreparedStatement insert = connection.prepareStatement("SELECT * FROM items WHERE Item LIKE ? OR Location = ? OR Date LIKE ? OR Color LIKE ? OR Type = ?");
+            // Prepare the SQL query with appropriate comparison operators
+            PreparedStatement insert = connection.prepareStatement("SELECT * FROM items WHERE Item LIKE ? AND Location LIKE ? AND Date LIKE ? AND Color LIKE ? AND Type LIKE ?");
             insert.setString(1, "%" + item + "%");
             insert.setString(2, "%" + location + "%");
             insert.setString(3, "%" + date + "%");
@@ -237,6 +238,7 @@ public boolean login(String Role, String Password) {
             throw new RuntimeException(ex);
         }
     }
+    
     
     
 
