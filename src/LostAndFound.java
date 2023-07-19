@@ -59,12 +59,12 @@ public class LostAndFound extends JFrame implements ActionListener {
     private JTextField txtStudentDate;
     private JTextField txtStudentColor;
     private JTable table1;
-    private JComboBox comboBox1;
+    private JComboBox cmbStud;
     private JButton btnLoginStud;
     private JButton btnLoginRegister;
     private JButton btnStudentSearch;
     private JButton btnAdminGoBack;
-    private JComboBox comboBox2;
+    private JComboBox cmbAdmin;
     private JPanel user;
     private String role;
 
@@ -108,6 +108,8 @@ public class LostAndFound extends JFrame implements ActionListener {
         this.setSize(600,600);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.add(cmbStud);
+        this.add(cmbAdmin);
 
         // Add the panel to the frame
         this.add(panel1);
@@ -125,13 +127,13 @@ public class LostAndFound extends JFrame implements ActionListener {
         btnStudentSearch.addActionListener(this);
         btnAdminGoBack.addActionListener(this);
 
-        comboBox2.addItem("Stationary");
-        comboBox2.addItem("Electronic Devices");
-        comboBox2.addItem("Personal Items");
+        cmbAdmin.addItem("Stationary");
+        cmbAdmin.addItem("Electronic Devices");
+        cmbAdmin.addItem("Personal Items");
 
-        comboBox1.addItem("Stationary");
-        comboBox1.addItem("Electronic Devices");
-        comboBox1.addItem("Personal Items");
+        cmbStud.addItem("Stationary");
+        cmbStud.addItem("Electronic Devices");
+        cmbStud.addItem("Personal Items");
 
         btnAdminGoBack.addActionListener(new ActionListener() {
             @Override
@@ -169,7 +171,7 @@ public class LostAndFound extends JFrame implements ActionListener {
                 if(db.login(Role, Password)){
                     JOptionPane.showMessageDialog(null,"You have logged in successfully.\n Welcome");
                     login.setVisible(false);
-                    db.viewColumn(comboBox1);
+                    db.viewColumn(cmbStud);
                     student.setVisible(true);
                 } else{
                     JOptionPane.showMessageDialog(null,"You have not entered all the fields or Wrong credentials");
@@ -190,7 +192,7 @@ public class LostAndFound extends JFrame implements ActionListener {
                 String location = txtStudentLocation.getText();
                 String date = txtStudentDate.getText();
                 String color = txtStudentColor.getText();
-                String type = comboBox1.getSelectedItem().toString();
+                String type = cmbStud.getSelectedItem().toString();
 
                 db.search(table1, item, location, date, color, type);
             } catch (Exception ex){
