@@ -23,8 +23,7 @@ public class database {
             connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
             statement = connection.createStatement();
 
-            String query = "SELECT * FROM registration WHERE role = '" +
-                    username + "' AND password = '" + password + "'";
+            String query = "SELECT * FROM registration WHERE Role = '" +username + "' AND Password = '" + password + "'";
             System.out.println(query);
             ResultSet rs = statement.executeQuery(query);
             success = rs.next();
