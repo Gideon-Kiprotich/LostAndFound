@@ -120,21 +120,22 @@ public boolean login(String Role, String Password) {
     }
 
     // The add function to the lost and found table
-    public boolean add(String item, String Location, String Date, String Color, String Type, String Additional_info){
+    public boolean add(int Item_id, String item, String Location, String Date, String Color, String Type, String Additional_info){
         boolean success = false;
         try {
             Class.forName(DRIVER);
             connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
             statement = connection.createStatement();
-            String query = "INSERT INTO lost_and_found (item, Location, Date, Color, Type, Additional_info) VALUES (?, ?, ?, ?, ?, ?)";
+            String query = "INSERT INTO items (Item_id, item, Location, Date, Color, Type, Additional_info) VALUES (?, ?, ?, ?, ?, ?, ?)";
             
             PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, item);
-            preparedStatement.setString(2, Location);
-            preparedStatement.setString(3, Date);
-            preparedStatement.setString(4, Color);
-            preparedStatement.setString(5, Type);
-            preparedStatement.setString(6, Additional_info);
+            preparedStatement.setInt(1, Item_id);
+            preparedStatement.setString(2, item);
+            preparedStatement.setString(3, Location);
+            preparedStatement.setString(4, Date);
+            preparedStatement.setString(5, Color);
+            preparedStatement.setString(6, Type);
+            preparedStatement.setString(7, Additional_info);
             
             int rowsAffected = preparedStatement.executeUpdate();
             if (rowsAffected > 0) {

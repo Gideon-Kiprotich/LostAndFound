@@ -162,6 +162,7 @@ public class LostAndFound extends JFrame implements ActionListener {
 
         if(e.getSource() == btnAdminAdd){
             try{
+                int item_id = Integer.parseInt(txtAdmintemID.getText());
                 String item = txtStudItem.getText();
                 String location = txtAminLocation.getText();
                 String date = txtAdminDate.getText();
@@ -169,7 +170,7 @@ public class LostAndFound extends JFrame implements ActionListener {
                 String type = txtAdminType.getText();
                 String info = txtAdminInfo.getText();
 
-                if(db.add(item, location, date, color, type, info)){
+                if(db.add(item_id, item, location, date, color, type, info)){
                     JOptionPane.showMessageDialog(null,"You have added an item successfully.\n Welcome");
                     admin.setVisible(false);
                     student.setVisible(true);
