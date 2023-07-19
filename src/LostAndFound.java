@@ -221,6 +221,7 @@ public class LostAndFound extends JFrame implements ActionListener {
                 String info = txtAdminInfo.getText();
 
                 if(db.add(item_id, item, location, date, color, type, info)){
+                    db.table_update(table1);
                     JOptionPane.showMessageDialog(null,"You have added an item successfully.\n Welcome");
 
                 } else{
@@ -236,6 +237,7 @@ public class LostAndFound extends JFrame implements ActionListener {
                 int item_id = Integer.parseInt(txtAdmintemID.getText());
 
                 if(db.delete(item_id)){
+                    db.table_update(table1);
                     JOptionPane.showMessageDialog(null,"You have deleted an item successfully.\n Welcome");
 
                 } else{
@@ -257,6 +259,7 @@ public class LostAndFound extends JFrame implements ActionListener {
                 String info = txtAdminInfo.getText();
 
                 if(db.update(item_id, item, location, date, color, type, info)){
+                    db.table_update(table1);
                     JOptionPane.showMessageDialog(null,"You have updated an item successfully.\n Welcome");
 
                 } else{
