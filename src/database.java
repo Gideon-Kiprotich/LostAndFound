@@ -16,7 +16,7 @@ public class database {
 
 
     // The login function
-public boolean login(String username, String password) {
+public boolean login(String Role, String Password) {
     boolean success = false;
     Connection connection = null;
     PreparedStatement statement = null;
@@ -28,8 +28,8 @@ public boolean login(String username, String password) {
 
         String query = "SELECT * FROM registration WHERE Role = ? AND Password = ?";
         statement = connection.prepareStatement(query);
-        statement.setString(1, username);
-        statement.setString(2, password);
+        statement.setString(1, Role);
+        statement.setString(2, Password);
 
         System.out.println(statement); // Print the executed statement (optional)
 
@@ -101,14 +101,14 @@ public boolean login(String username, String password) {
     }
 
     // Use username to get the user role in registration table and store the role in a variable
-    public String getRole(String username) {
+    public String getRole(String Role) {
         String role = "";
         try {
             Class.forName(DRIVER);
             connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
             statement = connection.createStatement();
 
-            String query = "SELECT role FROM registration WHERE username = '" + username + "'";
+            String query = "SELECT role FROM registration WHERE Role = '" + Role + "'";
             ResultSet rs = statement.executeQuery(query);
             while (rs.next()) {
                 role = rs.getString("role");
