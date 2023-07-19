@@ -59,12 +59,10 @@ public class LostAndFound extends JFrame implements ActionListener {
     private JTextField txtStudentDate;
     private JTextField txtStudentColor;
     private JTable table1;
-    private JComboBox cmbStud;
     private JButton btnLoginStud;
     private JButton btnLoginRegister;
     private JButton btnStudentSearch;
     private JButton btnAdminGoBack;
-    private JComboBox cmbAdmin;
     private JButton btnStudGoBack;
     private JTextField txtStudType;
     private JPanel user;
