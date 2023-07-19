@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="748018f1-2881-4550-af96-aa8e537ba03c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/LostAndFound.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/LostAndFound.form" afterDir="false" />
-    </list>
+    <list default="true" id="748018f1-2881-4550-af96-aa8e537ba03c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +52,7 @@
       <updated>1689616269734</updated>
       <workItem from="1689616271033" duration="2820000" />
       <workItem from="1689691968266" duration="9293000" />
-      <workItem from="1689750560527" duration="786000" />
+      <workItem from="1689750560527" duration="1426000" />
     </task>
     <servers />
   </component>
