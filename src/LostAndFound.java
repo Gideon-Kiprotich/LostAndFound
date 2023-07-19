@@ -269,7 +269,8 @@ public class LostAndFound extends JFrame implements ActionListener {
 
         if(e.getSource() == btnAdminView){
         try{
-            db.getLostAndFound();
+            int item_id = Integer.parseInt(txtAdmintemID.getText());
+            db.fetch(item_id);
 
         } catch (Exception ex){
             System.out.println(ex.getMessage());

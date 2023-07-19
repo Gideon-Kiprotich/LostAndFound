@@ -319,34 +319,30 @@ public boolean login(String Role, String Password) {
         return success;
     }
 
-    // Fetch data from the lost and found table and store it in a list
-    public List<LostAndFound> getLostAndFound() {
-        List<LostAndFound> lostAndFound = new ArrayList<>();
+    // Fetch data from the lost and found table and store each column in its variable in LostAndFound class
+    public void fetch(int Item_id) {
         try {
-            Class.forName(DRIVER);
+            Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
-            statement = connection.createStatement();
 
-            String query = "SELECT * FROM items";
-            ResultSet rs = statement.executeQuery(query);
-            while (rs.next()) {
+            PreparedStatement insert = connection.prepareStatement("SELECT * FROM items WHERE Item_ID = ?");
+            insert.setInt(1, Item_id);
+            ResultSet resultSet = insert.executeQuery();
+            while (resultSet.next()) {
                 LostAndFound lost = new LostAndFound();
-                lost.setItem_id(rs.getInt("Item_id"));
-                lost.setItem(rs.getString("item"));
-                lost.setLocation(rs.getString("Location"));
-                lost.setDate(rs.getString("Date"));
-                lost.setColor(rs.getString("Color"));
-                lost.setType(rs.getString("Type"));
-                lost.setAdditional_info(rs.getString("Additional_info"));
-                lostAndFound.add(lost);
+                lost.setItem_id(resultSet.getInt("Item_ID"));
+                lost.setItem(resultSet.getString("Item"));
+                lost.setLocation(resultSet.getString("Location"));
+                lost.setDate(resultSet.getString("Date"));
+                lost.setColor(resultSet.getString("Color"));
+                lost.setType(resultSet.getString("Type"));
+                lost.setAdditional_info(resultSet.getString("Additional_info"));
             }
-            rs.close();
-            statement.close();
-            connection.close();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (ClassNotFoundException ex) {
+            throw new RuntimeException(ex);
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
         }
-        return lostAndFound;
     }
 
 
