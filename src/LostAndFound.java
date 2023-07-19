@@ -121,7 +121,7 @@ public class LostAndFound extends JFrame implements ActionListener {
                 if(db.login(Role, Password)){
                     JOptionPane.showMessageDialog(null,"You have logged in successfully.\n Welcome");
                     login.setVisible(false);
-                    db.table_update(table1);
+                    db.table_update(tblAdminView);
                     admin.setVisible(true);
                    
                 } else{
