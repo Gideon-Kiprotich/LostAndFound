@@ -37,7 +37,7 @@ public boolean login(String Role, String Password) {
         success = rs.next();
         rs.close();
 
-       
+       return true;
     } catch (ClassNotFoundException | SQLException ex) {
         Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
     } finally {
