@@ -327,7 +327,7 @@ public boolean login(String Role, String Password) {
             connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
             statement = connection.createStatement();
 
-            String query = "SELECT * FROM lost_and_found";
+            String query = "SELECT * FROM items";
             ResultSet rs = statement.executeQuery(query);
             while (rs.next()) {
                 LostAndFound lost = new LostAndFound();
