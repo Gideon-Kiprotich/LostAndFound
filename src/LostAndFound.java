@@ -120,7 +120,6 @@ public class LostAndFound extends JFrame implements ActionListener {
         btnAdminAdd.addActionListener(this);
         btnAdminDelete.addActionListener(this);
         btnAdminUpdate.addActionListener(this);
-        btnAdminView.addActionListener(this);
         btnRegLogin.addActionListener(this);
         btnLoginStud.addActionListener(this);
         btnLoginRegister.addActionListener(this);
