@@ -134,14 +134,6 @@ public class LostAndFound extends JFrame implements ActionListener {
         cmbStud.addItem("Stationary");
         cmbStud.addItem("Electronic Devices");
         cmbStud.addItem("Personal Items");
-
-        btnAdminGoBack.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                admin.setVisible(false);
-                login.setVisible(true);
-            }
-        });
     }
 
     @Override
@@ -162,7 +154,7 @@ public class LostAndFound extends JFrame implements ActionListener {
                 System.out.println(ex.getMessage());
             }
         }
-        
+
         if(e.getSource() == btnLoginAdmin){
             try{
                 String Role = txtLoginUsername.getText();
