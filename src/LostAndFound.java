@@ -146,6 +146,23 @@ public class LostAndFound extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == btnLoginStud){
+            try{
+                String Role = txtLoginUsername.getText();
+                String Password = txtLoginPassword.getText();
+                if(db.login(Role, Password)){
+                    JOptionPane.showMessageDialog(null,"You have logged in successfully.\n Welcome");
+                    login.setVisible(false);
+                    db.viewColumn(cmbStud);
+                    student.setVisible(true);
+                } else{
+                    JOptionPane.showMessageDialog(null,"You have not entered all the fields or Wrong credentials");
+                }
+            } catch (Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        
         if(e.getSource() == btnLoginAdmin){
             try{
                 String Role = txtLoginUsername.getText();
@@ -164,22 +181,6 @@ public class LostAndFound extends JFrame implements ActionListener {
             }
         }
 
-        if (e.getSource() == btnLoginStud){
-            try{
-                String Role = txtLoginUsername.getText();
-                String Password = txtLoginPassword.getText();
-                if(db.login(Role, Password)){
-                    JOptionPane.showMessageDialog(null,"You have logged in successfully.\n Welcome");
-                    login.setVisible(false);
-                    db.viewColumn(cmbStud);
-                    student.setVisible(true);
-                } else{
-                    JOptionPane.showMessageDialog(null,"You have not entered all the fields or Wrong credentials");
-                }
-            } catch (Exception ex){
-                System.out.println(ex.getMessage());
-            }
-        }
 
         if(e.getSource() == btnLoginRegister){
             login.setVisible(false);
