@@ -201,6 +201,9 @@ public boolean login(String Role, String Password) {
             ResultSet resultSet = insert.executeQuery();
             ResultSetMetaData rsmd = resultSet.getMetaData();
             DefaultTableModel model = (DefaultTableModel) table1.getModel();
+
+            model.setRowCount(0);
+            
             int col = rsmd.getColumnCount();
             String[] colName = new String[col];
             for (int i = 0; i < col; i++) {
@@ -239,6 +242,7 @@ public boolean login(String Role, String Password) {
             
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, Item_id);
+
             
             int rowsAffected = preparedStatement.executeUpdate();
             if (rowsAffected > 0) {

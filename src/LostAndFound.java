@@ -65,6 +65,7 @@ public class LostAndFound extends JFrame implements ActionListener {
     private JButton btnStudentSearch;
     private JButton btnAdminGoBack;
     private JComboBox cmbAdmin;
+    private JButton btnStudGoBack;
     private JPanel user;
     private String role;
 
@@ -125,6 +126,7 @@ public class LostAndFound extends JFrame implements ActionListener {
         btnLoginRegister.addActionListener(this);
         btnStudentSearch.addActionListener(this);
         btnAdminGoBack.addActionListener(this);
+        btnStudGoBack.addActionListener(this);
 
         cmbAdmin.addItem("Stationary");
         cmbAdmin.addItem("Electronic Devices");
@@ -152,6 +154,11 @@ public class LostAndFound extends JFrame implements ActionListener {
             } catch (Exception ex){
                 System.out.println(ex.getMessage());
             }
+        }
+
+        if(e.getSource() == btnStudGoBack){
+            student.setVisible(false);
+            login.setVisible(true);
         }
 
         if(e.getSource() == btnLoginAdmin){
