@@ -5,6 +5,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 public class database {
     static final String DRIVER = "com.mysql.cj.jdbc.Driver";
@@ -179,6 +181,38 @@ public boolean login(String Role, String Password) {
         return success;
     }
 
+     public void table_update(JTable table1) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
+
+            PreparedStatement insert = connection.prepareStatement("SELECT * FROM items");
+            ResultSet resultSet = insert.executeQuery();
+            ResultSetMetaData rsmd = resultSet.getMetaData();
+            DefaultTableModel model = (DefaultTableModel) table1.getModel();
+            int col = rsmd.getColumnCount();
+            String[] colName = new String[col];
+            for (int i = 0; i < col; i++) {
+                colName[i] = rsmd.getColumnName(i + 1);
+                model.setColumnIdentifiers(colName);
+            }
+            String a, b, c, d, e;
+            while (resultSet.next()) {
+                a = resultSet.getString(1);
+                b = resultSet.getString(2);
+                c = resultSet.getString(3);
+                d= resultSet.getString(4);
+                String[] row = {a, b, c, d};
+                model.addRow(row);
+            }
+        } catch (ClassNotFoundException ex) {
+            throw new RuntimeException(ex);
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+
+
     // Update function with id included
     public boolean update(int Item_id, String item, String Location, String Date, String Color, String Type, String Additional_info){
         boolean success = false;
@@ -201,7 +235,6 @@ public boolean login(String Role, String Password) {
             if (rowsAffected > 0) {
                 success = true;
             }
-            
             preparedStatement.close();
             statement.close();
             connection.close();

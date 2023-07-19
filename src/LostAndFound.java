@@ -53,6 +53,7 @@ public class LostAndFound extends JFrame implements ActionListener {
     private JLabel lblStudType;
     private JLabel lblStudInfo;
     private JButton btnRegLogin;
+    private JTable table1;
     private JPanel user;
     private String role;
 
@@ -120,6 +121,7 @@ public class LostAndFound extends JFrame implements ActionListener {
                 if(db.login(Role, Password)){
                     JOptionPane.showMessageDialog(null,"You have logged in successfully.\n Welcome");
                     login.setVisible(false);
+                    db.table_update(table1);
                     admin.setVisible(true);
                    
                 } else{
