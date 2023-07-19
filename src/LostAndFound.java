@@ -184,6 +184,7 @@ public class LostAndFound extends JFrame implements ActionListener {
 
         if(e.getSource() == goBackButton){
             student.setVisible(false);
+            admin.setVisible(false);
             login.setVisible(true);
         }
 
