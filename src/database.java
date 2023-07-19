@@ -16,33 +16,52 @@ public class database {
 
 
     // The login function
-    public boolean login(String username, String password) {
-        boolean success = false;
-        try {
-            Class.forName(DRIVER);
-            connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
-            statement = connection.createStatement();
+public boolean login(String username, String password) {
+    boolean success = false;
+    Connection connection = null;
+    PreparedStatement statement = null;
+    ResultSet rs = null;
 
-            String query = "SELECT * FROM registration WHERE Role = '" +username + "' AND Password = '" + password + "'";
-            System.out.println(query);
-            ResultSet rs = statement.executeQuery(query);
-            success = rs.next();
-            rs.close();
-            //
+    try {
+        Class.forName(DRIVER);
+        connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
 
-            statement.close();
-            connection.close();
-            if(success){
-                JOptionPane.showMessageDialog(null,"You have logged in successfully.\n Welcome");
-            } else{
-                JOptionPane.showMessageDialog(null,"You have not entered all the fields or Wrong credentials");
-            }
-        } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        String query = "SELECT * FROM registration WHERE Role = ? AND Password = ?";
+        statement = connection.prepareStatement(query);
+        statement.setString(1, username);
+        statement.setString(2, password);
 
+        System.out.println(statement); // Print the executed statement (optional)
+
+        rs = statement.executeQuery();
+        success = rs.next();
+        rs.close();
+
+        if (success) {
+            JOptionPane.showMessageDialog(null, "You have logged in successfully.\nWelcome");
+        } else {
+            JOptionPane.showMessageDialog(null, "You have not entered all the fields or wrong credentials");
         }
-        return success;
+    } catch (ClassNotFoundException | SQLException ex) {
+        Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+    } finally {
+        try {
+            if (rs != null) {
+                rs.close();
+            }
+            if (statement != null) {
+                statement.close();
+            }
+            if (connection != null) {
+                connection.close();
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
+    return success;
+}
+
 
 
     // The register function to the registration table

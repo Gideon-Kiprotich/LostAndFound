@@ -52,6 +52,7 @@ public class LostAndFound extends JFrame implements ActionListener {
     private JLabel lblStudColor;
     private JLabel lblStudType;
     private JLabel lblStudInfo;
+    private JButton btnRegLogin;
     private JPanel user;
 
     public void setItem_id(int int1) {
@@ -102,6 +103,7 @@ public class LostAndFound extends JFrame implements ActionListener {
         btnAdminDelete.addActionListener(this);
         btnAdminUpdate.addActionListener(this);
         btnAdminView.addActionListener(this);
+        btnRegLogin.addActionListener(this);
 
     }
 
@@ -152,6 +154,11 @@ public class LostAndFound extends JFrame implements ActionListener {
             } catch (Exception ex){
                 System.out.println(ex.getMessage());
             }
+        }
+
+        if(e.getSource() == btnRegLogin){
+            registration.setVisible(false);
+            login.setVisible(true);
         }
 
         if(e.getSource() == btnAdminAdd){
