@@ -54,6 +54,7 @@ public class LostAndFound extends JFrame implements ActionListener {
     private JLabel lblStudInfo;
     private JButton btnRegLogin;
     private JPanel user;
+    private String role;
 
     public void setItem_id(int int1) {
         this.txtAdmintemID.setText(String.valueOf(int1));
@@ -81,6 +82,9 @@ public class LostAndFound extends JFrame implements ActionListener {
 
     public void setAdditional_info(String string) {
         this.txtAdminInfo.setText(string);
+    }
+    public void setRole(String role) {
+        this.role = role;
     }
 
 
@@ -116,10 +120,10 @@ public class LostAndFound extends JFrame implements ActionListener {
                 if(db.login(Role, Password)){
                     JOptionPane.showMessageDialog(null,"You have logged in successfully.\n Welcome");
                     login.setVisible(false);
-                    String role = db.getRole(Role);
-                    if(role == "admin"){
+                    
+                    if(this.role == "admin"){
                         admin.setVisible(true);
-                    } else if(role == "user"){
+                    } else if(this.role == "user"){
                         student.setVisible(true);
                     } else{
                         JOptionPane.showMessageDialog(null,"You have not entered all the fields or Wrong credentials");

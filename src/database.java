@@ -97,7 +97,7 @@ public boolean login(String Role, String Password) {
     }
 
     // Use username to get the user role in registration table and store the role in a variable
-    public String getRole(String Role) {
+    public void getRole(String Role) {
         String role = "";
         try {
             Class.forName(DRIVER);
@@ -107,7 +107,7 @@ public boolean login(String Role, String Password) {
             String query = "SELECT role FROM registration WHERE Role = '" + Role + "'";
             ResultSet rs = statement.executeQuery(query);
             while (rs.next()) {
-                role = rs.getString("role");
+                role = rs.getString("Role");
             }
             rs.close();
             statement.close();
@@ -115,7 +115,8 @@ public boolean login(String Role, String Password) {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return role;
+        LostAndFound lost = new LostAndFound();
+        lost.setRole(role);
     }
 
     // The add function to the lost and found table
