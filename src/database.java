@@ -37,11 +37,7 @@ public boolean login(String Role, String Password) {
         success = rs.next();
         rs.close();
 
-        if (success) {
-            JOptionPane.showMessageDialog(null, "You have logged in successfully.\nWelcome");
-        } else {
-            JOptionPane.showMessageDialog(null, "You have not entered all the fields or wrong credentials");
-        }
+       
     } catch (ClassNotFoundException | SQLException ex) {
         Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
     } finally {
