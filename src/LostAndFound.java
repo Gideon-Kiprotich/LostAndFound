@@ -11,7 +11,7 @@ public class LostAndFound extends JFrame implements ActionListener {
     private JTextField txtLoginPassword;
     private JLabel username;
     private JLabel password;
-    private JButton btnLoginSubmit;
+    private JButton btnLoginAdmin;
     private JTextField txtRegistrationName;
     private JTextField txtRegistrationSchoolID;
     private JTextField txtRegistrationEmail;
@@ -54,6 +54,15 @@ public class LostAndFound extends JFrame implements ActionListener {
     private JLabel lblStudInfo;
     private JButton btnRegLogin;
     private JTable tblAdminView;
+    private JTextField txtStudentItem;
+    private JTextField txtStudentLocation;
+    private JTextField txtStudentDate;
+    private JTextField txtStudentColor;
+    private JTable table1;
+    private JComboBox comboBox1;
+    private JButton btnLoginStud;
+    private JButton btnLoginRegister;
+    private JButton btnStudentSearch;
     private JPanel user;
     private String role;
 
@@ -102,19 +111,22 @@ public class LostAndFound extends JFrame implements ActionListener {
         this.add(panel1);
 
         // Add action listener to the buttons
-        btnLoginSubmit.addActionListener(this);
+        btnLoginAdmin.addActionListener(this);
         btnRegistrationSubmit.addActionListener(this);
         btnAdminAdd.addActionListener(this);
         btnAdminDelete.addActionListener(this);
         btnAdminUpdate.addActionListener(this);
         btnAdminView.addActionListener(this);
         btnRegLogin.addActionListener(this);
+        btnLoginStud.addActionListener(this);
+        btnLoginRegister.addActionListener(this);
+        btnStudentSearch.addActionListener(this);
 
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == btnLoginSubmit){
+        if(e.getSource() == btnLoginAdmin){
             try{
                 String Role = txtLoginUsername.getText();
                 String Password = txtLoginPassword.getText();
@@ -127,6 +139,42 @@ public class LostAndFound extends JFrame implements ActionListener {
                 } else{
                     JOptionPane.showMessageDialog(null,"You have not entered all the fields or Wrong credentials");
                 }
+            } catch (Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+
+        if (e.getSource() == btnLoginStud){
+            try{
+                String Role = txtLoginUsername.getText();
+                String Password = txtLoginPassword.getText();
+                if(db.login(Role, Password)){
+                    JOptionPane.showMessageDialog(null,"You have logged in successfully.\n Welcome");
+                    login.setVisible(false);
+                    db.viewColumn(comboBox1);
+                    student.setVisible(true);
+                } else{
+                    JOptionPane.showMessageDialog(null,"You have not entered all the fields or Wrong credentials");
+                }
+            } catch (Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+
+        if(e.getSource() == btnLoginRegister){
+            login.setVisible(false);
+            registration.setVisible(true);
+        }
+
+        if(e.getSource() == btnStudentSearch){
+            try{
+                String item = txtStudentItem.getText();
+                String location = txtStudentLocation.getText();
+                String date = txtStudentDate.getText();
+                String color = txtStudentColor.getText();
+                String type = comboBox1.getSelectedItem().toString();
+
+                db.search(table1, item, location, date, color, type);
             } catch (Exception ex){
                 System.out.println(ex.getMessage());
             }

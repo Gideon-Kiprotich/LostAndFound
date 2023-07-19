@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -153,6 +154,79 @@ public boolean login(String Role, String Password) {
         
         return success;
     }
+
+    //View columns in combo box from the com.munyao.duka.database
+    public void viewColumn(JComboBox comboBox) throws SQLException {
+        boolean success=false;
+        try{
+            Class.forName(DRIVER);
+            connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
+            statement = connection.createStatement();
+
+            String query = "SELECT Type FROM items;";
+            System.out.println(query);
+            ResultSet rs = statement.executeQuery(query);
+
+            comboBox.removeAllItems();
+            while(rs.next())
+            {
+                comboBox.addItem(rs.getString(1));
+            }
+            success = rs.next();
+            rs.close();
+
+            statement.close();
+            connection.close();
+        } catch (SQLException e){
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, e);
+        }catch (ClassNotFoundException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+
+        }
+
+    }
+
+    // Search items that are like the input: item, location, date, color, type then display them in the table
+    public void search(JTable table1, String item, String location, String date, String color, String type) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
+
+            PreparedStatement insert = connection.prepareStatement("SELECT * FROM items WHERE Item LIKE ? OR Location LIKE ? OR Date LIKE ? OR Color LIKE ? OR Type LIKE ?");
+            insert.setString(1, "%" + item + "%");
+            insert.setString(2, "%" + location + "%");
+            insert.setString(3, "%" + date + "%");
+            insert.setString(4, "%" + color + "%");
+            insert.setString(5, "%" + type + "%");
+            ResultSet resultSet = insert.executeQuery();
+            ResultSetMetaData rsmd = resultSet.getMetaData();
+            DefaultTableModel model = (DefaultTableModel) table1.getModel();
+            int col = rsmd.getColumnCount();
+            String[] colName = new String[col];
+            for (int i = 0; i < col; i++) {
+                colName[i] = rsmd.getColumnName(i + 1);
+                model.setColumnIdentifiers(colName);
+            }
+            String a, b, c, d, e, f, g;
+            while (resultSet.next()) {
+                a = resultSet.getString(1);
+                b = resultSet.getString(2);
+                c = resultSet.getString(3);
+                d = resultSet.getString(4);
+                e = resultSet.getString(5);
+                f = resultSet.getString(6);
+                g = resultSet.getString(7);
+                String[] row = {a, b, c, d, e, f, g};
+                model.addRow(row);
+            }
+        } catch (ClassNotFoundException ex) {
+            throw new RuntimeException(ex);
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+    
+
 
     // delete function to the lost and found table using the id
     public boolean delete(int Item_id){
