@@ -120,14 +120,8 @@ public class LostAndFound extends JFrame implements ActionListener {
                 if(db.login(Role, Password)){
                     JOptionPane.showMessageDialog(null,"You have logged in successfully.\n Welcome");
                     login.setVisible(false);
-                    
-                    if(this.role == "admin"){
-                        admin.setVisible(true);
-                    } else if(this.role == "user"){
-                        student.setVisible(true);
-                    } else{
-                        JOptionPane.showMessageDialog(null,"You have not entered all the fields or Wrong credentials");
-                    }
+                    admin.setVisible(true);
+                   
                 } else{
                     JOptionPane.showMessageDialog(null,"You have not entered all the fields or Wrong credentials");
                 }
