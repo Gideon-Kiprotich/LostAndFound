@@ -63,6 +63,7 @@ public class LostAndFound extends JFrame implements ActionListener {
     private JButton btnLoginStud;
     private JButton btnLoginRegister;
     private JButton btnStudentSearch;
+    private JButton goBackButton;
     private JPanel user;
     private String role;
 
@@ -121,6 +122,7 @@ public class LostAndFound extends JFrame implements ActionListener {
         btnLoginStud.addActionListener(this);
         btnLoginRegister.addActionListener(this);
         btnStudentSearch.addActionListener(this);
+        goBackButton.addActionListener(this);
 
     }
 
@@ -180,6 +182,11 @@ public class LostAndFound extends JFrame implements ActionListener {
             }
         }
 
+        if(e.getSource() == goBackButton){
+            student.setVisible(false);
+            login.setVisible(true);
+        }
+
         if(e.getSource() == btnRegistrationSubmit) {
             try{
                 String name = txtRegistrationName.getText();
@@ -221,7 +228,7 @@ public class LostAndFound extends JFrame implements ActionListener {
                 String info = txtAdminInfo.getText();
 
                 if(db.add(item_id, item, location, date, color, type, info)){
-                    db.table_update(table1);
+                    db.table_update(tblAdminView);
                     JOptionPane.showMessageDialog(null,"You have added an item successfully.\n Welcome");
 
                 } else{
@@ -237,7 +244,7 @@ public class LostAndFound extends JFrame implements ActionListener {
                 int item_id = Integer.parseInt(txtAdmintemID.getText());
 
                 if(db.delete(item_id)){
-                    db.table_update(table1);
+                    db.table_update(tblAdminView);
                     JOptionPane.showMessageDialog(null,"You have deleted an item successfully.\n Welcome");
 
                 } else{
@@ -259,7 +266,7 @@ public class LostAndFound extends JFrame implements ActionListener {
                 String info = txtAdminInfo.getText();
 
                 if(db.update(item_id, item, location, date, color, type, info)){
-                    db.table_update(table1);
+                    db.table_update(tblAdminView);
                     JOptionPane.showMessageDialog(null,"You have updated an item successfully.\n Welcome");
 
                 } else{
