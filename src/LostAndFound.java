@@ -66,6 +66,7 @@ public class LostAndFound extends JFrame implements ActionListener {
     private JButton btnAdminGoBack;
     private JComboBox cmbAdmin;
     private JButton btnStudGoBack;
+    private JTextField txtStudType;
     private JPanel user;
     private String role;
 
@@ -191,7 +192,7 @@ public class LostAndFound extends JFrame implements ActionListener {
                 String location = txtStudentLocation.getText();
                 String date = txtStudentDate.getText();
                 String color = txtStudentColor.getText();
-                String type = cmbStud.getSelectedItem().toString();
+                String type = txtStudType.getText();
 
                 db.search(table1, item, location, date, color, type);
             } catch (Exception ex){

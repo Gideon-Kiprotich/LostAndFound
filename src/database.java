@@ -191,13 +191,46 @@ public boolean login(String Role, String Password) {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
     
-            // Prepare the SQL query with appropriate comparison operators
-            PreparedStatement insert = connection.prepareStatement("SELECT * FROM items WHERE Item LIKE ? AND Location LIKE ? AND Date LIKE ? AND Color LIKE ? AND Type LIKE ?");
-            insert.setString(1, "%" + item + "%");
-            insert.setString(2, "%" + location + "%");
-            insert.setString(3, "%" + date + "%");
-            insert.setString(4, "%" + color + "%");
-            insert.setString(5, "%" + type + "%");
+            // Create the base SQL query
+            StringBuilder queryBuilder = new StringBuilder("SELECT * FROM items WHERE 1=1");
+    
+            // Create the dynamic SQL query based on the provided search criteria
+            if (!item.isEmpty()) {
+                queryBuilder.append(" AND Item LIKE ?");
+            }
+            if (!location.isEmpty()) {
+                queryBuilder.append(" AND Location LIKE ?");
+            }
+            if (!date.isEmpty()) {
+                queryBuilder.append(" AND Date LIKE ?");
+            }
+            if (!color.isEmpty()) {
+                queryBuilder.append(" AND Color LIKE ?");
+            }
+            if (!type.isEmpty()) {
+                queryBuilder.append(" AND Type LIKE ?");
+            }
+    
+            PreparedStatement insert = connection.prepareStatement(queryBuilder.toString());
+    
+            // Set the parameters for the prepared statement
+            int parameterIndex = 1;
+            if (!item.isEmpty()) {
+                insert.setString(parameterIndex++, "%" + item + "%");
+            }
+            if (!location.isEmpty()) {
+                insert.setString(parameterIndex++, "%" + location + "%");
+            }
+            if (!date.isEmpty()) {
+                insert.setString(parameterIndex++, "%" + date + "%");
+            }
+            if (!color.isEmpty()) {
+                insert.setString(parameterIndex++, "%" + color + "%");
+            }
+            if (!type.isEmpty()) {
+                insert.setString(parameterIndex, "%" + type + "%");
+            }
+    
             ResultSet resultSet = insert.executeQuery();
             ResultSetMetaData rsmd = resultSet.getMetaData();
             DefaultTableModel model = (DefaultTableModel) table1.getModel();
@@ -212,16 +245,11 @@ public boolean login(String Role, String Password) {
                 model.setColumnIdentifiers(colName);
             }
     
-            String a, b, c, d, e, f, g;
+            String[] row = new String[col];
             while (resultSet.next()) {
-                a = resultSet.getString(1);
-                b = resultSet.getString(2);
-                c = resultSet.getString(3);
-                d = resultSet.getString(4);
-                e = resultSet.getString(5);
-                f = resultSet.getString(6);
-                g = resultSet.getString(7);
-                String[] row = {a, b, c, d, e, f, g};
+                for (int i = 0; i < col; i++) {
+                    row[i] = resultSet.getString(i + 1);
+                }
                 model.addRow(row);
             }
     
@@ -238,6 +266,7 @@ public boolean login(String Role, String Password) {
             throw new RuntimeException(ex);
         }
     }
+    
     
     
     
