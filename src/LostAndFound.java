@@ -101,6 +101,7 @@ public class LostAndFound extends JFrame implements ActionListener {
 
 
     database db = new database();
+    
 
 
     public LostAndFound(){

@@ -12,7 +12,9 @@
         <constraints>
           <card name="Card1"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-4567212"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="b482c" class="javax.swing.JTextField" binding="txtLoginUsername">
@@ -21,7 +23,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="4115f" class="javax.swing.JTextField" binding="txtLoginPassword">
             <constraints>
@@ -29,7 +33,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="a9f7f" class="javax.swing.JLabel" binding="username">
             <constraints>
@@ -52,6 +58,7 @@
               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-11919555"/>
               <text value="Login as Admin"/>
             </properties>
           </component>
@@ -60,6 +67,7 @@
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-11919555"/>
               <text value="Login as Student"/>
             </properties>
           </component>
@@ -68,6 +76,7 @@
               <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-11919555"/>
               <text value="Register"/>
             </properties>
           </component>
@@ -78,7 +87,9 @@
         <constraints>
           <card name="Card2"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-4567212"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="acfad" class="javax.swing.JTextField" binding="txtRegistrationName">
@@ -87,7 +98,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="bb691" class="javax.swing.JTextField" binding="txtRegistrationSchoolID">
             <constraints>
@@ -95,7 +108,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="1313" class="javax.swing.JTextField" binding="txtRegistrationEmail">
             <constraints>
@@ -103,7 +118,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="ecc34" class="javax.swing.JTextField" binding="txtRegistrationPassword">
             <constraints>
@@ -111,7 +128,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="b0f8f" class="javax.swing.JTextField" binding="txtRegistrationFaculty">
             <constraints>
@@ -119,7 +138,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="29dd8" class="javax.swing.JTextField" binding="txtRegistrationNationalID">
             <constraints>
@@ -127,7 +148,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="82009" class="javax.swing.JLabel" binding="lblRegName">
             <constraints>
@@ -183,7 +206,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="3d423" class="javax.swing.JTextField" binding="txtRegistrationGender">
             <constraints>
@@ -191,7 +216,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="62bec" class="javax.swing.JTextField" binding="txtRegistrationPhone">
             <constraints>
@@ -199,7 +226,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="bc2b5" class="javax.swing.JTextField" binding="txtRegistrationRole">
             <constraints>
@@ -207,7 +236,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="e78eb" class="javax.swing.JLabel" binding="lblRegAddress">
             <constraints>
@@ -246,6 +277,7 @@
               <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-11919555"/>
               <text value="Submit"/>
             </properties>
           </component>
@@ -254,6 +286,7 @@
               <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-11919555"/>
               <text value="Go to Login"/>
             </properties>
           </component>
@@ -264,7 +297,9 @@
         <constraints>
           <card name="Card3"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-4567212"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="213f4" class="javax.swing.JButton" binding="btnAdminUpdate">
@@ -272,6 +307,7 @@
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-11919555"/>
               <text value="Update"/>
             </properties>
           </component>
@@ -280,6 +316,7 @@
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-11919555"/>
               <text value="Delete"/>
             </properties>
           </component>
@@ -288,6 +325,7 @@
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-11919555"/>
               <text value="Add"/>
             </properties>
           </component>
@@ -297,7 +335,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="7a81c" class="javax.swing.JTextField" binding="txtAminLocation">
             <constraints>
@@ -305,7 +345,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="57fb5" class="javax.swing.JTextField" binding="txtAdminDate">
             <constraints>
@@ -313,7 +355,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="f6047" class="javax.swing.JTextField" binding="txtAdminColor">
             <constraints>
@@ -321,7 +365,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="e8a6f" class="javax.swing.JLabel" binding="lblStudItem">
             <constraints>
@@ -361,7 +407,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="25e12" class="javax.swing.JLabel" binding="lblStudType">
             <constraints>
@@ -385,7 +433,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="d10b" class="javax.swing.JLabel" binding="lblStudItemID">
             <constraints>
@@ -401,13 +451,16 @@
                 <preferred-size width="150" height="50"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="e1dbd" class="javax.swing.JButton" binding="btnAdminGoBack">
             <constraints>
               <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-11919555"/>
               <text value="Go back"/>
             </properties>
           </component>
@@ -418,7 +471,9 @@
         <constraints>
           <card name="Card4"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-4567212"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="d36dd" class="javax.swing.JTextField" binding="txtStudentItem">
@@ -427,7 +482,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="7506e" class="javax.swing.JLabel">
             <constraints>
@@ -451,7 +508,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="d7a70" class="javax.swing.JLabel">
             <constraints>
@@ -467,7 +526,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="a0380" class="javax.swing.JLabel">
             <constraints>
@@ -483,7 +544,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="a9cda" class="javax.swing.JTable" binding="table1" default-binding="true">
             <constraints>
@@ -491,7 +554,9 @@
                 <preferred-size width="150" height="50"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
           <component id="54bd8" class="javax.swing.JLabel">
             <constraints>
@@ -506,6 +571,7 @@
               <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-11919555"/>
               <text value="Search"/>
             </properties>
           </component>
@@ -514,6 +580,7 @@
               <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-11919555"/>
               <text value="Go Back"/>
             </properties>
           </component>
@@ -523,7 +590,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-11919555"/>
+            </properties>
           </component>
         </children>
       </grid>
